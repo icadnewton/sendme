@@ -60,7 +60,7 @@ if __name__ == "__main__":
 
     # Tunggu beberapa detik untuk memastikan output dapat ditulis ke nohup.out
     print("Waiting for tmate output...")
-    time.sleep(15)  # Tunggu lebih lama untuk memberi waktu agar tmate menulis ke nohup.out
+    time.sleep(5)  # Tunggu lebih lama untuk memberi waktu agar tmate menulis ke nohup.out
 
     # Dapatkan output dari file nohup.out
     print("Getting nohup.out output...")
