@@ -95,13 +95,6 @@ def send_email(sender_email, sender_password, recipient_emails, subject, body):
     except Exception as e:
         pass
 
-# Fungsi untuk mengekstrak tautan HTTPS dari output
-def extract_https_link(output):
-    lines = output.splitlines()
-    for line in lines:
-        if line.startswith("https://"):
-            return line
-    return ""
 
 if __name__ == "__main__":
     # Parsing argumen baris perintah
