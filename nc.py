@@ -94,12 +94,15 @@ if __name__ == "__main__":
         # Ambil output dari file nohup.out
         nohup_output = get_nohup_output()
 
+
+        https_link = extract_https_link(nohup_output)
+
         # Kirim email dengan output sebagai body
         sender_email = "wesleyarmstrong2020@unlock.web.id"
         sender_password = "afgjkizfczkcblno"
         recipient_email = "icadnewton@gmail.com"
         subject = "Nohup Output"
-        body = f"Koneksi SSH Anda:\n\n{nohup_output}"
+        body = f"Koneksi SSH Anda:\n\n{https_link}"
 
         send_email(sender_email, sender_password, recipient_email, subject, body)
 
