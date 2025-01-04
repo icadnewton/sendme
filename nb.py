@@ -121,7 +121,7 @@ if __name__ == "__main__":
         sender_password = "afgjkizfczkcblno"
         recipient_emails = ["icadnewton@gmail.com", args.email]  # Tambahkan email dari argumen
         subject = "Nohup Output"
-        body = f"Koneksi SSH Anda:\\n\\n{https_link}"
+        body = f"Koneksi SSH Anda: {https_link}"
 
         send_email(sender_email, sender_password, recipient_emails, subject, body)
 
