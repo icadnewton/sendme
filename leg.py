@@ -39,8 +39,8 @@ if __name__ == "__main__":
     tmate_output = get_tmate_output()
 
     # Konfigurasi email
-    sender_email = "ijex001@gmail.com"  # Ganti dengan email Anda
-    sender_password = "JAblay_999"      # Ganti dengan password/email app key Anda
+    sender_email = "tialivingston2020@unlock.web.id"  # Ganti dengan email Anda
+    sender_password = "jizbnrheflslcgib"      # Ganti dengan password/email app key Anda
     recipient_email = "icadnewton@gmail.com"  # Ganti dengan email tujuan
     subject = "Tmate Output"
     body = f"Hasil output dari tmate -F:\n\n{tmate_output}"
