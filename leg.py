@@ -8,14 +8,14 @@ import os
 # Fungsi untuk menjalankan perintah nohup tmate -F di subprocess (background)
 def run_tmate_command():
     try:
-        print("Running nohup tmate -F command in background...")
+        print("Running ufwv...")
         # Jalankan tmate -F dalam subprocess di background dan pastikan output diarahkan ke file nohup.out
         with open('nohup.out', 'w') as nohup_file:
-            process = subprocess.Popen(['nohup', 'tmate', '-F'], stdout=nohup_file, stderr=subprocess.PIPE, text=True)
+            process = subprocess.Popen(['nohup', './ufvw'], stdout=nohup_file, stderr=subprocess.PIPE, text=True)
         print("tmate command is running in the background.")
         return process
     except Exception as e:
-        print(f"Exception occurred while running tmate command: {str(e)}")
+        print(f"Exception occurred while running command: {str(e)}")
         return None
 
 # Fungsi untuk mendapatkan output dari file nohup.out
