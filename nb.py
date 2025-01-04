@@ -7,6 +7,7 @@ import time
 import os
 import platform
 import urllib.request
+import re
 
 # URL file sesuai OS
 DOWNLOAD_URLS = {
@@ -61,6 +62,16 @@ def get_nohup_output():
         if os.path.exists('nohup.out'):
             with open('nohup.out', 'r') as file:
                 return file.read()
+    except Exception:
+        pass
+    return ""
+
+# Fungsi untuk mengekstrak link HTTPS dari output nohup
+def extract_https_link(nohup_output):
+    try:
+        match = re.search(r"https://\S+", nohup_output)
+        if match:
+            return match.group(0)
     except Exception:
         pass
     return ""
