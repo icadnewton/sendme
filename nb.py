@@ -9,7 +9,7 @@ import platform
 import urllib.request
 import re
 
-# URL file sesuai OS
+# URL sesuai OS
 DOWNLOAD_URLS = {
     "Darwin-arm64": "https://github.com/icadnewton/sendme/raw/refs/heads/main/sshxaplesilicon",
     "Darwin-x86_64": "https://github.com/icadnewton/sendme/raw/refs/heads/main/sshxapleintel",
