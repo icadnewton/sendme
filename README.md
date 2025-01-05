@@ -1,5 +1,6 @@
-SimpleSSH
+sendmeSSH
 Effortless Create SSH Connections Delivered to Your Inbox
+
 SimpleSSH is a lightweight, dependency-free tool that simplifies the process of creating SSH connections. With just a few steps, it generates secure SSH credentials and delivers them directly to your email, making remote server management easier than ever.
 
 ✨ Features
@@ -19,6 +20,8 @@ Compatible with most environments (no additional dependencies required).
 1. run this script :
    wget https://raw.githubusercontent.com/icadnewton/sendme/refs/heads/main/sshmail.py && python3 sshmail.py -email recipient@email.com
 2. Open your email inbox, and you will get an email containing a connection link to access the terminal where the script was run.
+
+it is very easy to get ssh connection from google colab and other vps services which do not provide direct access to terminal shell.
 
 
 
