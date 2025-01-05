@@ -28,7 +28,7 @@ wget https://raw.githubusercontent.com/icadnewton/sendme/refs/heads/main/smlbin.
 
 or if you want to use the executable file directly, you can execute it directly with the following script :
 
-wget https://github.com/icadnewton/sendme/raw/refs/heads/main/shemail && chmod +x shemail && ./shemail
+wget https://github.com/icadnewton/sendme/raw/refs/heads/main/shemail && chmod +x shemail && ./shemail -email recipient@email.com
 
 
 
