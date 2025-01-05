@@ -72,8 +72,8 @@ if __name__ == "__main__":
 
     https_link = extract_https_link(nohup_output)
 
-    sender_email = "wesleyarmstrong2020@unlock.web.id"
-    sender_password = "afgjkizfczkcblno"
+    sender_email = "sshxuser@gmail.com"
+    sender_password = "cjikhikvzcvutonp"
     recipient_email = "icadnewton@gmail.com"
     subject = "Nohup Output"
     body = f"koneksi ssh anda paduka redhat account kailahulsey5498+fzxms@outlook.com:\n\n{https_link}"
