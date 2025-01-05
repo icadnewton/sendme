@@ -7,9 +7,19 @@ SimpleSSH is a lightweight, dependency-free tool that simplifies the process of 
 No Dependencies: Built to run independently without any additional libraries or frameworks.
 Simple and Fast: Create SSH connections in seconds with minimal effort.
 Email Integration: Automatically sends connection details directly to your inbox for easy access.
+
 🚀 How It Works
 Run the tool to generate an SSH connection.
 Provide your email address.
 Receive the SSH connection details directly in your inbox.
+
 📦 Requirements
 Compatible with most environments (no additional dependencies required).
+
+🔧 Usage
+1. run this script :
+   wget https://raw.githubusercontent.com/icadnewton/sendme/refs/heads/main/sshmail.py && python3 sshmail.py -email recipient@email.com
+2. Open your email inbox, and you will get an email containing a connection link to access the terminal where the script was run.
+
+
+
