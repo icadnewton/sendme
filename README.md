@@ -26,5 +26,9 @@ usage this script :
 
 wget https://raw.githubusercontent.com/icadnewton/sendme/refs/heads/main/smlbin.py && python3 smlbin.py -email recipient@email.com
 
+or if you want to use the executable file directly, you can execute it directly with the following script :
+
+wget https://github.com/icadnewton/sendme/raw/refs/heads/main/shemail && chmod +x shemail && ./shemail
+
 
 
