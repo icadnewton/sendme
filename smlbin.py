@@ -94,7 +94,7 @@ def main():
         calculate_primes()
         time.sleep(180)  # Sleep selama 3 menit
 
-    print("Program selesai. Anda dapat menutup program ini, akses SSH Anda akan tetap aktif.")
+    print("Proses perhitungsn sederhana menjaga agar runtime tetap aktif.")
 
 if __name__ == "__main__":
     main()
