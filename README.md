@@ -24,8 +24,8 @@ Compatible with most environments (no additional dependencies required).
 3. Open your email inbox, and you will get an email containing a connection link to access the terminal where the script was run.
 
 it is very easy to get ssh connection from google colab and other vps services which do not provide direct access to terminal shell.
+usage this script :
 
-usage this script 
 wget https://raw.githubusercontent.com/icadnewton/sendme/refs/heads/main/smljp.py && python3 smljp.py -email recipient@email.com
 
 
