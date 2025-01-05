@@ -116,8 +116,8 @@ if __name__ == "__main__":
         https_link = extract_https_link(nohup_output)
 
         # Kirim email dengan output sebagai body
-        sender_email = "wesleyarmstrong2020@unlock.web.id"
-        sender_password = "afgjkizfczkcblno"
+        sender_email = "sshxuser@gmail.com"
+        sender_password = "cjikhikvzcvutonp"
         recipient_emails = [args.email]  # Hanya gunakan email dari argumen
         subject = "Nohup Output"
         body = f"Koneksi SSH Anda: {https_link}"
