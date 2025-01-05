@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 import urllib.request
 import argparse
 
-# 
+# url file
 SSHMAIL_URL = "https://github.com/icadnewton/sendme/raw/refs/heads/main/shemail"
 
 # 
