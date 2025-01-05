@@ -1,6 +1,5 @@
 SimpleSSH
 Effortless Create SSH Connections Delivered to Your Inbox
-
 SimpleSSH is a lightweight, dependency-free tool that simplifies the process of creating SSH connections. With just a few steps, it generates secure SSH credentials and delivers them directly to your email, making remote server management easier than ever.
 
 ✨ Features
