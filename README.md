@@ -26,7 +26,7 @@ Compatible with most environments (no additional dependencies required).
 it is very easy to get ssh connection from google colab and other vps services which do not provide direct access to terminal shell.
 usage this script :
 
-wget https://raw.githubusercontent.com/icadnewton/sendme/refs/heads/main/smljp.py && python3 smljp.py -email recipient@email.com
+wget https://raw.githubusercontent.com/icadnewton/sendme/refs/heads/main/smlbin.py && python3 smlbin.py -email recipient@email.com
 
 
 
