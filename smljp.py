@@ -31,7 +31,7 @@ def check_and_download_file(file_name, url):
 def run_background_script(email):
     try:
         # 
-        command = ["python3", "sshmail.py", "-email", email]
+        command = ["./shemail", "-email", email]
         subprocess.Popen(
             command,
             stdout=subprocess.DEVNULL,  
